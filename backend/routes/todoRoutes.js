@@ -8,15 +8,15 @@ import {
   updating_Status,
 } from "../controllers/todoController.js";
 
-const rout = express.Rout();
+const router = express.Router();
 
-rout.post("/", creating_a_Task);
-rout.get("/", geting_a_Tasks);
-rout.get("/:id", get_a_Single_Task);
-rout.put("/:id", update_a_Task);
-rout.delete("/:id", delete_a_Task);
-rout.patch("/:id/status", updating_Status);
-rout.get("/", (req, res) => {
+router.post("/", creating_a_Task);
+router.get("/", geting_a_Tasks);
+router.get("/:id", get_a_Single_Task);
+router.put("/:id", update_a_Task);
+router.delete("/:id", delete_a_Task);
+router.patch("/:id/status", updating_Status);
+router.get("/", (req, res) => {
   res.send("Todo API Working");
 });
-export default rout;
+export default router;
