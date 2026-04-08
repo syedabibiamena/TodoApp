@@ -3,7 +3,7 @@ import axios from "axios";
 
 // const API = "http://localhost:5000/api/todo_task";
 
-const API = "https://todoapp-6rur.onrender.com";
+const API = "https://todoapp-6rur.onrender.com/api/todo_task";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -24,6 +24,8 @@ function App() {
       setLoading(true);
       setError("");
       const res = await axios.get(API);
+
+      console.log(res.data);
       setTasks(res.data);
     } catch (err) {
       setError("Failed to fetch tasks");
