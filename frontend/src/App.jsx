@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:5000/api/todo_task";
+// const API = "http://localhost:5000/api/todo_task";
+
+const API = "https://todoapp-6rur.onrender.com";
 
 function App() {
   const [tasks, setTasks] = useState([]);
